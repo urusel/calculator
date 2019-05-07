@@ -6,6 +6,8 @@
 package com.mycompany.servlets;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 /**
  *
@@ -29,8 +31,11 @@ public class UsersServlet extends HttpServlet{
            
            Class.forName(drverClassName);
            
+           connection=DriverManager.getConnection(dbUrl,db.username,password );
            
+        }catch(IOException | SQLException | ClassNotFoundException e){
+            throw new IllegalStateException(e);
         }
-    }
+    }}
     
 }
