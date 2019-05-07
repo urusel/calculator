@@ -12,26 +12,35 @@ import java.time.LocalDate;
  * @author user
  */
 public class User {
- private String name;
- private String password;
- private LocalDate birthDate;
- public User(String name,String password, LocalDate birthDate){
-  this.name = name;
-  this.password = password;
-  this.birthDate = birthDate;
+  private Integer id;
+ private String firstName;
+ private String lastName;
+ 
+ public User(Integer id,String firstName, String lastName ){
+    this.id=id;
+    this.firstName=firstName;
+    this.lastName=lastName;
  }
- public String getName() {
-     return name;
-     
+ public Integer getId(){
+     return id;
  }
- public void setName(String name) {
-     this.name = name;
-     
+ public void setId(Integer id){
+   this.id=id;  
  }
- public String getPassword() {
-     return password;
+ public String getFirstName(){
+     return firstName;
  }
- public LocalDate getBirthDate() {
-     return birthDate;
- }
+  public void setFirstName(String firstName){
+     this.firstName=firstName;  
+  }
+  
+ public String getLastName(){
+     return lastName;
 }
+ 
+public void setLastName(String lastName){
+     this.lastName=lastName;  
+  }
+}
+  
+

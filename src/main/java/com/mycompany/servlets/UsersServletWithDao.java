@@ -9,6 +9,6 @@ package com.mycompany.servlets;
  *
  * @author user
  */
-public class LoginServlet {
+public class UsersServletWithDao {
     
 }
