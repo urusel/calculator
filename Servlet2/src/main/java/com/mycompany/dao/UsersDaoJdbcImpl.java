@@ -18,7 +18,6 @@ import java.util.Optional;
 
 import java.nio.channels.IllegalSelectorException;
 import static java.util.Optional.empty;
-import javax.sql.DataSource;
 
 /**
  *
@@ -28,12 +27,12 @@ public class UsersDaoJdbcImpl implements UsersDao{
    private final String SQL_SELECT_ALL =
             "SELECT * FROM fix_user ";
     
-    private final String SQL_SELECT_BY_ID =
+    private final String SQL_SELECT_ALL =
             "SELECT * FROM fix_user WHERE id = ?";
     
     private Connection connection;
     
-    public UsersDaoJdbcImpl(DataSource dataSourse){
+    public UsersDaoJdbcImpl(DataSourse dataSourse){
         try{
             this.connection=dataSourse.getConnection();
         }catch(SQLException e){
